@@ -17,6 +17,8 @@ jobs:
         env:
           FIRST_NAME: Koryun
           Last_Name: Gevorgyan
+          
+     steps:    
       - name: Set current date as env variable
         if: ${{ env.DAY_OF_WEEK ==! 'Sat' }}
         run: echo " Hello $FIRST_NAME $Last_Name, NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
