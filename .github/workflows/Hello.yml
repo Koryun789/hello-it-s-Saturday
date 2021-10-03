@@ -13,7 +13,7 @@ jobs:
       - name: "Hello when it's Saturday"
         if: ${{ env.DAY_OF_WEEK == 'Sat' }}
         run: echo "Hello $FIRST_NAME $Last_Name, today is Saturday!"
-      - name: "Hello it's not a Saturday"  
+      - name: "Hello when it's not a Saturday"  
         if: ${{ env.DAY_OF_WEEK ==!'Sat' }}
         run: echo "Hello $FIRST_NAME $Last_Name, today is not a Saturday!"
         env:
