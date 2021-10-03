@@ -16,9 +16,11 @@ jobs:
         env:
           FIRST_NAME: Koryun
           Last_Name: Gevorgyan
-      - name: "Hello when it's not a Saturday"  
+          
+      - name: "When it's not a Saturday"  
         if: ${{ env.DAY_OF_WEEK ==!'Sat' }}
-        run: echo "Hello $FIRST_NAME $Last_Name, today is not a Saturday!"
+        run: echo "Hello $FIRST_NAME $Last_Name, "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV"
         env:
           FIRST_NAME: Koryun
           Last_Name: Gevorgyan
+ 
