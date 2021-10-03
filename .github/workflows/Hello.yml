@@ -14,7 +14,7 @@ jobs:
         if: ${{ env.DAY_OF_WEEK == 'Sat' }}
         run: echo "Hello $FIRST_NAME $Last_Name, today is Saturday!"
       - name: "Hello it's not a Saturday"  
-        if: ${{ env.DAY_OF_WEEK !'Sat' }}
+        if: ${{ env.DAY_OF_WEEK =!'Sat' }}
         run: echo "Hello $FIRST_NAME $Last_Name, today is not a Saturday!"
         env:
           FIRST_NAME: Koryun
