@@ -14,12 +14,12 @@ jobs:
         if: ${{ env.DAY_OF_WEEK == 'Sat' }}
         run: echo "Hello $FIRST_NAME $Last_Name, today is Saturday!"
       - name: "When it's not a Saturday"  
-        if: ${{ env.DAY_OF_WEEK ==!'Sat' }}
-        run: echo "Hello $FIRST_NAME $Last_Name, "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" 
         env:
           FIRST_NAME: Koryun
           Last_Name: Gevorgyan
-          
-      
+      - name: Set current date as env variable
+        run: echo " Hello $FIRST_NAME $Last_Name, NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+      - name: Echo current date
+        run: echo $NOW
 
  
