@@ -10,9 +10,11 @@ jobs:
     env:
       DAY_OF_WEEK: Sat
     steps:
-      - name: "Hello world when it's Saturday"
+      - name: "Hello ... when it's Saturday"
         if: ${{ env.DAY_OF_WEEK == 'Sat' }}
         run: echo "Hello $FIRST_NAME $Last_Name, today is Saturday!"
+        else:
+        run: echo "Hello $FIRST_NAME $Last_Name, today is not a Saturday!"
         env:
           FIRST_NAME: Koryun
           middle_name: 
